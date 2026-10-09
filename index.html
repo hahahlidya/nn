@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>你的名字 - 个人作品集</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --grad: linear-gradient(135deg, #6366f1, #8b5cf6);
+    --text-main: #1e1b2e;
+    --text-sub: #6b6880;
+    --bg: #fafaff;
+  }
+
+  body {
+    font-family: "PingFang SC", "Microsoft YaHei", "Segoe UI", sans-serif;
+    background: var(--bg);
+    color: var(--text-main);
+    line-height: 1.7;
+  }
+
+  .container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== Hero ===== */
+  header {
+    padding: 90px 0 70px;
+    text-align: center;
+  }
+
+  .avatar {
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+    margin: 0 auto 28px;
+    background: var(--grad);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    color: #fff;
+    box-shadow: 0 12px 32px rgba(139, 92, 246, .35);
+  }
+
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  header h1 {
+    font-size: 48px;
+    font-weight: 800;
+    margin-bottom: 16px;
+  }
+
+  header h1 span {
+    background: var(--grad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  header p {
+    font-size: 22px;
+    color: var(--text-sub);
+  }
+
+  /* ===== Works ===== */
+  .works {
+    padding: 40px 0 80px;
+  }
+
+  .works h2 {
+    font-size: 34px;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .card {
+    background: #fff;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 6px 24px rgba(99, 102, 241, .10);
+    transition: transform .3s ease, box-shadow .3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(99, 102, 241, .22);
+  }
+
+  .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .card-body {
+    padding: 24px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 17px;
+    color: var(--text-sub);
+  }
+
+  .tag {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 5px 14px;
+    font-size: 14px;
+    border-radius: 999px;
+    background: var(--grad);
+    color: #fff;
+  }
+
+  /* ===== Footer ===== */
+  footer {
+    padding: 60px 0 70px;
+    text-align: center;
+    background: var(--grad);
+    color: #fff;
+  }
+
+  footer h2 {
+    font-size: 32px;
+    margin-bottom: 28px;
+  }
+
+  .contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .contact-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 32px;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, .7);
+    border-radius: 999px;
+    transition: background .3s ease;
+  }
+
+  .contact-links a:hover {
+    background: rgba(255, 255, 255, .18);
+  }
+
+  /* ===== 响应式 ===== */
+  @media (max-width: 820px) {
+    .grid { grid-template-columns: 1fr; }
+    header h1 { font-size: 36px; }
+    header p { font-size: 19px; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- 顶部：头像 + 姓名 + 简介 -->
+  <header class="container">
+    <div class="avatar">
+      <!-- 头像占位：替换成自己的图片即可，如 <img src="avatar.jpg" alt=""> -->
+      👋
+    </div>
+    <h1><span>你的名字</span></h1>
+    <p>一名热爱创造的开发者 / 设计师，专注于构建简洁优雅的 Web 体验。</p>
+  </header>
+
+  <!-- 中部：作品卡片 -->
+  <section class="works container">
+    <h2>精选作品</h2>
+    <div class="grid">
+      <article class="card">
+        <img src="https://picsum.photos/seed/project1/600/400" alt="作品一封面" />
+        <div class="card-body">
+          <h3>作品一</h3>
+          <p>一个快速、优雅的任务管理工具，帮助团队高效协作。</p>
+          <span class="tag">Web 应用</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/seed/project2/600/400" alt="作品二封面" />
+        <div class="card-body">
+          <h3>作品二</h3>
+          <p>数据可视化仪表盘，将复杂数据转化为直观图表。</p>
+          <span class="tag">数据可视化</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="https://picsum.photos/seed/project3/600/400" alt="作品三封面" />
+        <div class="card-body">
+          <h3>作品三</h3>
+          <p>极简风格个人博客系统，支持 Markdown 写作与暗色模式。</p>
+          <span class="tag">开源项目</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- 底部：联系方式 -->
+  <footer>
+    <div class="container">
+      <h2>联系我</h2>
+      <div class="contact-links">
+        <a href="mailto:you@example.com">📮 you@example.com</a>
+        <a href="https://github.com/yourname" target="_blank" rel="noopener">🐙 GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
